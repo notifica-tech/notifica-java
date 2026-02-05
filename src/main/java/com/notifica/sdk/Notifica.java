@@ -14,7 +14,7 @@ import com.notifica.sdk.resources.*;
  * // Or with custom configuration
  * Notifica notifica = new Notifica(NotificaConfig.builder()
  *     .apiKey("nk_live_...")
- *     .baseUrl("https://api.usenotifica.com.br/v1")
+ *     .baseUrl("https://app.usenotifica.com.br/v1")
  *     .timeout(Duration.ofSeconds(30))
  *     .maxRetries(3)
  *     .build());
