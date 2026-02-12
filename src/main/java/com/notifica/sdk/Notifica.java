@@ -47,6 +47,7 @@ public class Notifica {
     private final Billing billing;
     private final InboxEmbed inboxEmbed;
     private final Inbox inbox;
+    private final Audit audit;
 
     /**
      * Creates a new Notifica client instance.
@@ -88,6 +89,7 @@ public class Notifica {
         this.billing = new Billing(client);
         this.inboxEmbed = new InboxEmbed(client);
         this.inbox = new Inbox(client);
+        this.audit = new Audit(client);
     }
 
     /**
@@ -179,5 +181,13 @@ public class Notifica {
      */
     public Inbox inbox() {
         return inbox;
+    }
+
+    /**
+     * Audit resource - view audit logs for security-sensitive actions.
+     * <p><strong>⚠️ Admin Only:</strong> Requires admin authentication (Bearer token from backoffice).
+     */
+    public Audit audit() {
+        return audit;
     }
 }
